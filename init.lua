@@ -94,3 +94,29 @@ album:register_song("thunderstruck", {
     spec = {},
 })
 
+album:register_song("lofi", {
+    title = "LoFi",
+    short_description = nil,
+    long_description = nil,
+    artist = nil,
+    filepath = songpath("lofi"),
+    spec = {},
+})
+
+album:register_song("ride", {
+    title = "Ride",
+    short_description = nil,
+    long_description = nil,
+    artist = nil,
+    filepath = songpath("ride"),
+    spec = {},
+})
+
+album:register_song("neon_lights", {
+    title = "Neon Lights",
+    short_description = nil,
+    long_description = nil,
+    artist = nil,
+    filepath = songpath("neon_lights"),
+    spec = {},
+})
