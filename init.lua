@@ -32,10 +32,10 @@ for _, data in ipairs({
     { "thundering_overture", "Thundering Overture", nil },
     { "thunderstruck",       "Thunderstruck",       nil },
     { "lofi",                "LoFi",                nil },
-    { "ride",                "Ride",                nil, false },
+    { "ride",                "Ride",                nil, true },
     { "neon_lights",         "Neon Lights",         nil },
 }) do
-    local id, title, short_description, has_stereo = unpack(data)
+    local id, title, short_description, no_stereo = unpack(data)
     album:register_song(id, {
         title = title,
         short_description = short_description,
@@ -44,7 +44,7 @@ for _, data in ipairs({
         spec = {
             filepath = songpath(id),
         },
-        multichannel_specs = has_stereo and {
+        multichannel_specs = not no_stereo and {
             {
                 filepath = songpath(id .. "_ch0"),
             },
